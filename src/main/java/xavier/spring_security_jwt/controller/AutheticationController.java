@@ -1,6 +1,8 @@
 package xavier.spring_security_jwt.controller;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import xavier.spring_security_jwt.service.AutheticationService;
 
@@ -14,7 +16,7 @@ public class AutheticationController {
     }
 
     @PostMapping("authenticate")
-    public String authenticate() {
-        return autheticationService.authenticate();
+    public String authenticate( Authentication authentication) {
+        return autheticationService.authenticate(authentication);
     }
 }
