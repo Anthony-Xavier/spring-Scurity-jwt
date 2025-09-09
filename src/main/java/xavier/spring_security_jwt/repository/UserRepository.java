@@ -1,7 +1,7 @@
 package xavier.spring_security_jwt.repository;
 
-import org.apache.catalina.User;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.security.core.userdetails.User;
 
 import java.util.Optional;
 
